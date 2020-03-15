@@ -1,0 +1,54 @@
+
+
+body {
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.hoverbtn {
+  transition: all;
+  transition-duration: 0.2s;
+  transform: scale(1);
+  color:red;
+}
+
+.hoverbtn:hover {
+  font-size: 20px;
+}
+.pstfix {
+  position: fixed;
+}
+
+.signOutBtn {
+  font-size: 30px;
+}
+
+.name {
+  color: rgb(47,208,208)
+}
+
+.nameTag {
+  text-decoration: none;
+}
+
+.nameTag:hover {
+  color:black;
+} 
+
+.signOutBtn {
+  color: red;
+  font-size: 30px;
+  transition: all;
+  transition-duration: 0.2s;
+  transform: scale(1);
+}
+
+.totalTweet, .searchIcon {
+  background-color: rgb(47,208,208);
+}
+
+.inputIcon:hover {
+color: rgb(47,208,231)
+}
