@@ -123,6 +123,7 @@ const reTwitt = (originId) => {
             timeTwitt: moment().startOf('hour').fromNow(),
             content: contentConvert,
             like: false,
+            hashtagText: hashTagArray,
             comment: '',
             original: {
                 timeTwitt: originTwitt.timeTwitt,
