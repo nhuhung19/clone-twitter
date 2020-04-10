@@ -57,7 +57,7 @@ const addTwitter = () => {
     let twitterStory = {
         id: id,
         userName: currentName.userName,
-        timeTwitt: moment().startOf('hour').fromNow(),
+        timeTwitt: moment().startOf(Date.now()).fromNow(),
         content: contentConvert,
         like: false,
         comment: '',
@@ -121,7 +121,7 @@ const reTwitt = (originId) => {
         let reTwittObject = {
             id: id,
             userName: currentName.userName,
-            timeTwitt: moment().startOf('hour').fromNow(),
+            timeTwitt: moment().startOf(Date.now()).fromNow(),
             content: contentConvert,
             like: false,
             hashtagText: hashTagArray,
