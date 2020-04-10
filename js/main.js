@@ -6,16 +6,16 @@ let twitterArray = []
 
 
 
-async function getData() {
-    const res = await fetch("https://api.myjson.com/bins/1gvs62");
-    const data = await res.json();
-    console.log(data)
-        // let dataArray = JSON.parse(localStorage.getItem('dataTweet'))
-        // if (dataArray == null) {
-        //    dataArray = []
-        // }
-    return data || []
-}
+// async function getData() {
+//     const res = await fetch("https://api.myjson.com/bins/1gvs62");
+//     const data = await res.json();
+//     console.log(data)
+//         // let dataArray = JSON.parse(localStorage.getItem('dataTweet'))
+//         // if (dataArray == null) {
+//         //    dataArray = []
+//         // }
+//     return data || []
+// }
 
 
 
@@ -35,6 +35,7 @@ const countText = () => {
 
 textArea.addEventListener('input', countText)
 let currentName = JSON.parse(localStorage.getItem('data'))
+document.getElementById('userNameDisplay').innerHTML = currentName.userName
 console.log(currentName)
 
 const addTwitter = () => {
@@ -147,21 +148,21 @@ const hashTagFilter = (text) => {
     render(a)
 };
 
-const updateData = async(obj) => {
-    const resp = await fetch("https://api.myjson.com/bins/1gvs62", {
-        method: "PUT",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(obj)
-    });
-    const data = await resp.json(); // không cần dòng này vì không quan tâm lắm kết quả
-}
+// const updateData = async(obj) => {
+//     const resp = await fetch("https://api.myjson.com/bins/1gvs62", {
+//         method: "PUT",
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(obj)
+//     });
+//     const data = await resp.json(); // không cần dòng này vì không quan tâm lắm kết quả
+// }
 
-const render = async(array) => {
+const render = (array) => {
 
-    console.log(array)
-    await updateData(array) // update api
+    // console.log(array)
+    // await updateData(array) // update api
 
     let resultArray = array.map((item, i) => {
         let retwitt // by default will be null
@@ -228,8 +229,8 @@ signOutButton.addEventListener("click", signOut)
 
 
 
-async function runApp() {
-    twitterArray = await getData()
-    render(twitterArray)
-}
-runApp()
+// async function runApp() {
+//     twitterArray = await getData()
+//     render(twitterArray)
+// }
+// runApp()
